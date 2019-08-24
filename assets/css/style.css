@@ -1,0 +1,57 @@
+/* body{
+    background-image: url("../images/giphy-5.gif");
+} */
+
+body { 
+    background: url("../images/giphy-5.gif") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.jumbotron{
+    height: 1100px; 
+    margin: 100px; 
+    padding:20px;
+    text-align: center;
+    background-color:lightgoldenrodyellow;
+    color:blue;
+      /* background-image: url("../images/yes.gif"); */
+}
+
+h1 {  
+    font-family: 'Fontdiner Swanky', cursive;
+    text-shadow: 4px 4px 4px #aaa;
+    padding: 50px;    
+}
+
+#time{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Fira Code', monospace;
+    padding:20px;
+    color:red;
+ 
+}
+
+#game{
+    text-align: center;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 30px;
+    padding-left: 80px;
+    padding-right: 100px;
+}
+#start {
+    font-family: 'Nanum Brush Script', cursive;
+}
+.choice{
+    border: 1px  solid grey;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    cursor: pointer;  
+}
+h4{
+    font-size: 40px;
+}
+
