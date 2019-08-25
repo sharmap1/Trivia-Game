@@ -54,12 +54,38 @@ var quizQuestions = [
 
 // Initial Values
 //  Set our number counter to 30.
-var counter = 5;
+var counter = 30;
 var currentQuestion = 0;
 var score = 0;
 var lost = 0;
 var timer = 0;
 
+const funImages = [
+    './assets/images/yes-1.gif',
+    './assets/images/yes-2.gif',
+    './assets/images/yes-3.gif',
+    './assets/images/yes-4.gif',
+    './assets/images/yes-5.gif',
+    './assets/images/yes-6.gif',
+    './assets/images/yes-7.gif',
+    './assets/images/yes-8.gif',
+    './assets/images/yes-9.gif',
+    './assets/images/yes-10.gif'
+
+];
+const sadImages = [
+    './assets/images/no-1.gif',
+    './assets/images/no-2.gif',
+    './assets/images/no-3.gif',
+    './assets/images/no-4.gif',
+    './assets/images/no-5.gif',
+    './assets/images/no-6.gif',
+    './assets/images/no-7.gif',
+    './assets/images/no-8.gif',
+    './assets/images/no-9.gif',
+    './assets/images/no-10.gif'
+
+];
 function nextQuestion() {
     const questionOver = (quizQuestions.length - 1) === currentQuestion;
     if (questionOver) {
@@ -72,7 +98,9 @@ function nextQuestion() {
 function timeUp() {
     clearInterval(timer); // its gonna stop the interval that is set and stops at 0
     lost++;
-    nextQuestion();
+    preloadImage('lost');
+    setTimeout(nextQuestion, 3 * 1000);
+    // nextQuestion();
 }
 function decrement() {
     //  Decrease number by one.
@@ -85,7 +113,7 @@ function decrement() {
 }
 //Display question and answers in the browser
 function loadQuestion() {
-    counter = 5; 
+    counter = 30; 
     timer = setInterval(decrement, 1000); // 1 second = 1000 milisec 
     //Hide start button
     //display Q/A
@@ -119,12 +147,16 @@ $(document).on('click','.choice', function() {
         score++; // user wins
         console.log('winner');
         // call a function for pop up
-        nextQuestion();
+        preloadImage('win');
+        setTimeout(nextQuestion, 3 * 1000);
+        // nextQuestion();
          
     }else{
         lost++;
         console.log('loser');
-        nextQuestion();
+        preloadImage('lost');
+        setTimeout(nextQuestion, 3 * 1000);
+        // nextQuestion();
         
     }
 });
@@ -134,11 +166,10 @@ const result =`
     <p>You get: ${score} question(s) right</p>
     <p>You missed: ${lost} question(s)</p>
     <p>Total questions: ${quizQuestions.length}</p>
-    <button class ="btn btn-primary" id="reset"><h3>Reset Game</h3></button>
+    <button id="reset" class="btn btn-primary">Reset</button>
    <div><br><img src= "./assets/images/giphy-4.gif" alt="responsive" id="gifimg"></div>
    <audio autoplay loop><source src="./assets/images/song.mp3"</audio>
    
-
 `;
 $('#game').html(result);
 }
@@ -152,6 +183,14 @@ lost = 0;
 timer = 0;
 loadQuestion();
 });
+
+function randomImage(images) {
+    const random = Math.floor(Math.random() * images.length);
+    const randomImage = images[random];
+    return randomImage;
+}
+
+
 //to display at the bottom of the page the no of Q remaining:
 function loadRemainingQuestions() {
     const remainingQuestion = quizQuestions.length - (currentQuestion + 1); 
@@ -161,12 +200,30 @@ function loadRemainingQuestions() {
 }
 
 
+// display message after every right or wrong answer:
+function preloadImage(status) {
+    const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
+    if (status ==='win'){
+        $('#game').html(`
+            <p class="preload-image">Congratulations, You did it!</p>
+            <p class="preload-image">The correct answer: <b>${correctAnswer}</b></p>
+            <img class="animation" src="${randomImage(funImages)}"/>
+        `);
+    }else {
+        $('#game').html(`
+        <p class="preload-image">The correct answer: <b>${correctAnswer}</b></p>
+        <p class="preload-image">You lost!</p>
+        <img class= "animation" src="${randomImage(sadImages)}"/>
+    `);
+    }
+}
 // starts the game on click to start button 
 $('#start').click(function() {
     $('#start').remove();
     $('#time').html(counter);
     loadQuestion();
 });
+
 
 //       //  Once number hits zero...
 //       if (counter === 0) {

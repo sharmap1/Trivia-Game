@@ -1,33 +1,36 @@
-/* body{
-    background-image: url("../images/giphy-5.gif");
-} */
-
 body { 
     background: url("../images/giphy-5.gif") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 .jumbotron{
-    height: 1100px; 
-    margin: 100px; 
+    height: 600px; 
+    width:300px;    
+    margin: 15px; 
     padding:20px;
+    padding-top:40px;
     text-align: center;
     background-color:lightgoldenrodyellow;
     color:blue;
-      /* background-image: url("../images/yes.gif"); */
+
+}
+
+.wrapper{
+    margin-top: 80px;
 }
 
 h1 {  
     font-family: 'Fontdiner Swanky', cursive;
     text-shadow: 4px 4px 4px #aaa;
-    padding: 50px;    
+    padding: 5px;  
+    font-size: 25px;  
 }
 
 #time{
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
     font-family: 'Fira Code', monospace;
     padding:20px;
     color:red;
@@ -37,13 +40,22 @@ h1 {
 #game{
     text-align: center;
     font-family: 'Nanum Brush Script', cursive;
-    font-size: 30px;
-    padding-left: 80px;
-    padding-right: 100px;
+    font-size: 20px;
+
 }
 #start {
     font-family: 'Nanum Brush Script', cursive;
+    font-size: 20px;
+    margin:20px;
+    /* color: white;
+    background-color: blue; */
 }
+ #restart{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+} 
+
 .choice{
     border: 1px  solid grey;
     color: white;
@@ -52,6 +64,16 @@ h1 {
     cursor: pointer;  
 }
 h4{
-    font-size: 40px;
+    font-size: 20px;
+}
+#gifimg{
+    height:150px;
+    width: 175px;
+}
+.animation{
+
+width:150px;
+height:175px;
+
 }
 
