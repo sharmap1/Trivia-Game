@@ -20,7 +20,7 @@ I wanted to create a Minion trivia game that was towards the more difficult side
 
 ## Screenshot
 
-<img src="assets/images/Capture-1.JPG" width="350" height="450">
+<img src="assets/images/Capture-1.JPG" width="550" height="550">
 
 ## Installation
 
