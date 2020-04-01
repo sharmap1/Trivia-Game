@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Minion Trivia Game</title>
-      <!-- Style sheet, Bootstrap CDN -->
-      <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">  -->
-      <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">   
-      <link rel='stylesheet' href="./assets/css/style.css">
-      <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- Style sheet, Bootstrap CDN -->
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
   </head>
-    <body>
-        <!-- Bootstrap Container will hold everything. -->
-        <div class= "wrapper" class="fluid">
-            <!-- Jumbotron holds the title section. -->
-            <div class="jumbotron">
-                <h1>Minion Trivia Game</h1>            
-                <button class="btn btn-primary" id="start">Start</button> 
-                <h2 id ="time"></h2> 
-                <div id ="game"></div>
-            </div>   
+  <body>
+    <!-- Bootstrap Container will hold everything. -->
+    <div class="wrapper" class="fluid">
+      <!-- Jumbotron holds the title section. -->
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <h1>Minion Trivia Game</h1>
+            <h2 id="time"></h2>
+            <div id="game"></div>
+          </div>
+          <div class="col-md-6 offset-md-3">
+            <button
+              class="btn btn-primary"
+              id="start"
+              style="width: 100px;
+            margin: -20px -50px;
+            position: relative;
+            top: 50%;
+            left: 50%;"
+            >
+              Start
+            </button>
+          </div>
         </div>
-        <!-- jQuery link & minified cdn-->
-        <script
-          src="https://code.jquery.com/jquery-3.4.1.min.js"
-          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-          crossorigin="anonymous"></script>
-        <script src="./assets/javascript/app.js"></script>
-    </body>
+      </div>
+    </div>
+    <!-- jQuery link & minified cdn-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/javascript/app.js"></script>
+  </body>
 </html>
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Minion Trivia Game
 ## Overview
 This is a front end app that uses JavaScript for the logic and jQuery to manipulate HTML. This app has valid HTML and stylish CSS.
@@ -16,7 +16,7 @@ https://sharmap1.github.io/Trivia-Game/.
 I wanted to create a Minion trivia game that was towards the more difficult side and gave animation buffs a challenge. This was a huge learning and experience which I shared with my friends and family as well.
  
 ## Screenshot
-<img src="assets/images/screenshot.png" width="350" height="450" align="left"> 
+<img src="assets/images/screenshot.png" width="350" height="450"> 
 
 ## Installation
 ```
@@ -105,6 +105,5 @@ Instructor: Joel Stedman & TA s : Nick Aaland, Austin Williams, Ben Vaagen
 License
 MIT
 
-Copyright
 Copyright (c) [2019] [Prasamsha Sharma]
->>>>>>> 0876e8579356d866f5c1f1885085adb059e2f81c
+
