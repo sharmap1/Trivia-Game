@@ -20,14 +20,14 @@ I wanted to create a Minion trivia game that was towards the more difficult side
 
 ## Screenshot
 
-<img src="assets/images/screenshot.png" width="350" height="450">
+<img src="assets/images/Capture-1.JPG" width="350" height="450">
 
 ## Installation
 
 ```
 Git - Installing Git: Run git from terminal
 
-git clone git://github.com/sharmap1/Trivia-Game.git bash
+git clone git://github.com/sharmap1/Trivia-Game.git
 
 ```
 
